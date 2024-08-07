@@ -9,9 +9,9 @@ export default function DashboardLayoutProps({
   children,
 }: DashboardLayoutProps) {
   return (
-    <div className="flex h-screen overflow-y-clip">
+    <div className="flex h-screen">
       <Nav />
-      <div className="flex flex-1 flex-col">
+      <div className="flex h-screen flex-1 flex-col">
         <PageNav />
         {children}
       </div>
