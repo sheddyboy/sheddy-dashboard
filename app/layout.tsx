@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope, Poppins } from "next/font/google";
 import "./globals.css";
+import TanstackProvider from "@/providers/TanstackProvider";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -26,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${manrope.variable} ${poppins.variable} font-manrope`}>
-        {children}
+        <TanstackProvider>{children}</TanstackProvider>
       </body>
     </html>
   );
