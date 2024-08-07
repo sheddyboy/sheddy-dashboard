@@ -22,37 +22,39 @@ export default function PageNav({}: PageNavProps) {
   const path = usePathname();
   const routs: Route = {
     "/dashboard": "Dashboard",
-    "/project": "Project",
+    "/projects": "Projects",
     "/tasks": "My Tasks",
-    "/activity": "Activity",
+    "/activities": "Activities",
     "/team": "Team",
     "/messages": "Messages",
     "/settings": "Settings",
   };
 
   return (
-    <div className=" justify-between items-center px-[30px] flex py-[12px]">
-      <span className="font-semibold text-[20px]">{routs[path]}</span>
-      <div className="flex justify-between items-center gap-[38px]">
+    <div className="flex items-center justify-between px-[30px] py-[12px]">
+      <span className="text-[20px] font-semibold leading-[120%] tracking-[0.02em]">
+        {routs[`/${path.split("/")[1]}`]}
+      </span>
+      <div className="flex items-center justify-between gap-[38px]">
         <div className="relative flex items-center">
-          <Search className="absolute text-[#7D7A89] left-[12px] w-[20px] h-[20px]" />
+          <Search className="absolute left-[12px] h-[20px] w-[20px] text-[#7D7A89]" />
           <Input
             placeholder="Search anything..."
-            className="w-[213px] pl-[40px] h-[41px]"
+            className="h-[41px] w-[213px] pl-[40px]"
           />
         </div>
         <div className="flex items-center gap-[24px]">
-          <Bell className="w-[24px] h-[24px]" />
+          <Bell className="h-[24px] w-[24px]" />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="icon" size="icon">
-                <div className="flex gap-[16px] items-center">
-                  <Avatar className="w-[40px] h-[40px]">
-                    <AvatarImage src="https://github.com/shadcn.png" />
+                <div className="flex items-center gap-[16px]">
+                  <Avatar className="h-[40px] w-[40px]">
+                    {/* <AvatarImage src="https://github.com/shadcn.png" /> */}
                     <AvatarFallback>CN</AvatarFallback>
                   </Avatar>
                   Jackson Pierce
-                  <ChevronDown className="w-[20px] h-[20px]" />
+                  <ChevronDown className="h-[20px] w-[20px]" />
                 </div>
               </Button>
             </DropdownMenuTrigger>

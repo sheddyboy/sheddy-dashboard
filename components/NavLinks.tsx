@@ -20,17 +20,17 @@ export default function NavLinks({}: NavLinksProps) {
         <LayoutGrid className="h-[20px] w-[20px]" />
         Dashboard
       </NavButton>
-      <NavButton active={path === "/project"} href="/project">
+      <NavButton active={path === "/projects"} href="/projects">
         <CandlestickChart className="h-[20px] w-[20px]" />
-        Project
+        Projects
       </NavButton>
       <NavButton active={path === "/tasks"} href="/tasks">
         <SquareCheck className="h-[20px] w-[20px]" />
         My Task
       </NavButton>
-      <NavButton active={path === "/activity"} href="/activity">
+      <NavButton active={path === "/activities"} href="/activities">
         <PieChart className="h-[20px] w-[20px]" />
-        Activity
+        Activities
       </NavButton>
       <NavButton active={path === "/team"} href="/team">
         <UsersRound className="h-[20px] w-[20px]" />
